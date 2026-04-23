@@ -1,0 +1,19 @@
+use std::io;
+
+fn main() {
+    let mut alas = String::new();
+    let mut tinggi = String::new();
+
+    println!("Masukkan alas:");
+    io::stdin().read_line(&mut alas).expect("Gagal membaca input");
+
+    println!("Masukkan tinggi:");
+    io::stdin().read_line(&mut tinggi).expect("Gagal membaca input");
+
+    let alas: f64 = alas.trim().parse().expect("Input harus angka");
+    let tinggi: f64 = tinggi.trim().parse().expect("Input harus angka");
+
+    let luas = 0.5 * alas * tinggi;
+
+    println!("Luas segitiga adalah: {}", luas);
+}
