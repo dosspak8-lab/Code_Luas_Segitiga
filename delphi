@@ -1,0 +1,20 @@
+program LuasSegitiga;
+
+uses
+  SysUtils;
+
+var
+  alas, tinggi, luas: Real;
+
+begin
+  Write('Masukkan alas: ');
+  ReadLn(alas);
+
+  Write('Masukkan tinggi: ');
+  ReadLn(tinggi);
+
+  luas := 0.5 * alas * tinggi;
+
+  WriteLn('Luas segitiga = ', luas:0:2);
+  ReadLn;
+end.
