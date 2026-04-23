@@ -1,0 +1,18 @@
+Module Module1
+    Sub Main()
+        Dim alas As Double
+        Dim tinggi As Double
+        Dim luas As Double
+
+        Console.Write("Masukkan alas: ")
+        alas = Console.ReadLine()
+
+        Console.Write("Masukkan tinggi: ")
+        tinggi = Console.ReadLine()
+
+        luas = 0.5 * alas * tinggi
+
+        Console.WriteLine("Luas segitiga = " & luas)
+        Console.ReadLine()
+    End Sub
+End Module
