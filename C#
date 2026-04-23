@@ -1,0 +1,23 @@
+using System;
+
+namespace LuasSegitigaApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Input alas dan tinggi
+            Console.Write("Masukkan alas: ");
+            double alas = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Masukkan tinggi: ");
+            double tinggi = Convert.ToDouble(Console.ReadLine());
+
+            // Hitung luas
+            double luas = (alas * tinggi) / 2;
+
+            // Tampilkan hasil
+            Console.WriteLine("Luas segitiga adalah: " + luas);
+        }
+    }
+}
