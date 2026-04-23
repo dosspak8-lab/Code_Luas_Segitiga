@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Segitiga Anti-Error</title>
+    <style>
+        /* Gaya Tampilan (CSS) */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f7f6;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+        }
+        h2 { color: #333; text-align: center; margin-bottom: 20px; }
+        .input-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; color: #666; font-size: 14px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Penting agar padding tidak merusak lebar */
+            outline: none;
+        }
+        input:focus { border-color: #007bff; }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #0056b3; }
+        .hasil-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 6px;
+            text-align: center;
+        }
+        #hasil { color: #28a745; margin: 0; font-size: 24px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Luas Segitiga</h2>
+        
+        <div class="input-group">
+            <label for="alas">Alas (cm):</label>
+            <input type="number" id="alas" placeholder="0">
+        </div>
+
+        <div class="input-group">
+            <label for="tinggi">Tinggi (cm):</label>
+            <input type="number" id="tinggi" placeholder="0">
+        </div>
+
+        <button onclick="hitung()">Hitung Sekarang</button>
+
+        <div class="hasil-box">
+            <span>Hasil Luas:</span>
+            <h3 id="hasil">0</h3>
+        </div>
+    </div>
+
+    <script>
+        // Logika Perhitungan (JavaScript)
+        function hitung() {
+            // Ambil elemen input
+            const inputAlas = document.getElementById('alas');
+            const inputTinggi = document.getElementById('tinggi');
+            const displayHasil = document.getElementById('hasil');
+
+            // Ambil nilainya dan ubah ke angka
+            const alas = parseFloat(inputAlas.value);
+            const tinggi = parseFloat(inputTinggi.value);
+
+            // Validasi: Cek apakah input kosong atau bukan angka
+            if (isNaN(alas) || isNaN(tinggi) || alas <= 0 || tinggi <= 0) {
+                alert("Mohon masukkan angka alas dan tinggi yang benar!");
+                displayHasil.innerText = "0";
+                return; // Berhenti di sini jika ada error
+            }
+
+            // Rumus Luas: 1/2 * alas * tinggi
+            const luas = 0.5 * alas * tinggi;
+
+            // Tampilkan hasil ke layar
+            displayHasil.innerText = luas.toLocaleString('id-ID') + " cm²";
+        }
+    </script>
+
+</body>
+</html>
