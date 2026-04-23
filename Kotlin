@@ -8,3 +8,14 @@ fun main() {
     val tinggi = readLine()?.toDoubleOrNull()
     
     if (alas != null && tinggi != null && alas > 0 && tinggi > 0) {
+        val luas = (alas * tinggi) / 2
+        println("Luas segitiga = %.2f".format(luas))
+    } else {
+        println("Input tidak valid!")
+    }
+}
+
+// Fungsi terpisah
+fun hitungLuasSegitiga(alas: Double, tinggi: Double): Double {
+    return (alas * tinggi) / 2
+}
