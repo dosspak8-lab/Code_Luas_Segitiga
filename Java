@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class LuasSegitiga {
+    public static void main(String[] args) {
+        // Membuat objek scanner untuk menerima input
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("=== Program Hitung Luas Segitiga ===");
+        
+        // Input alas dan tinggi
+        System.out.print("Masukkan alas: ");
+        double alas = input.nextDouble();
+        
+        System.out.print("Masukkan tinggi: ");
+        double tinggi = input.nextDouble();
+        
+        // Hitung luas
+        double luas = 0.5 * alas * tinggi;
+        
+        // Tampilkan hasil
+        System.out.println("Luas segitiga adalah: " + luas);
+        
+        // Menutup scanner
+        input.close();
+    }
+}
