@@ -1,0 +1,10 @@
+-module(main).
+-export([start/0]).
+
+start() ->
+    {ok, [Alas]} = io:fread("Masukkan alas: ", "~f"),
+    {ok, [Tinggi]} = io:fread("Masukkan tinggi: ", "~f"),
+
+    Luas = 0.5 * Alas * Tinggi,
+
+    io:format("Luas segitiga adalah: ~p~n", [Luas]).
