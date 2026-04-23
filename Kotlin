@@ -1,0 +1,10 @@
+import kotlin.math.pow
+
+fun main() {
+    print("Masukkan alas: ")
+    val alas = readLine()?.toDoubleOrNull()
+    
+    print("Masukkan tinggi: ")
+    val tinggi = readLine()?.toDoubleOrNull()
+    
+    if (alas != null && tinggi != null && alas > 0 && tinggi > 0) {
