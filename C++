@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float alas, tinggi, luas;
+
+    // Input alas dan tinggi
+    cout << "Masukkan alas segitiga: ";
+    cin >> alas;
+    cout << "Masukkan tinggi segitiga: ";
+    cin >> tinggi;
+
+    // Menghitung luas
+    luas = 0.5 * alas * tinggi;
+
+    // Menampilkan hasil
+    cout << "Luas segitiga adalah: " << luas << endl;
+
+    return 0;
+}
