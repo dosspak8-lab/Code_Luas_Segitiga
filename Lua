@@ -1,0 +1,17 @@
+-- Program Menghitung Luas Segitiga dengan Lua
+
+print("=== Program Hitung Luas Segitiga ===")
+
+-- Meminta input dari pengguna
+io.write("Masukkan panjang alas: ")
+local alas = io.read("*n") -- membaca input sebagai angka
+
+io.write("Masukkan tinggi: ")
+local tinggi = io.read("*n")
+
+-- Menghitung luas
+local luas = 0.5 * alas * tinggi
+
+-- Menampilkan hasil
+print("------------------------------")
+print("Luas segitiga adalah: " .. luas)
