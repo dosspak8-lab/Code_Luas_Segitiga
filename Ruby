@@ -1,0 +1,14 @@
+# Program Menghitung Luas Segitiga di Ruby
+
+print "Masukkan Nilai Alas: "
+# .to_f digunakan untuk mengubah input string menjadi float (desimal)
+alas = gets.to_f
+
+print "Masukkan Nilai Tinggi: "
+tinggi = gets.to_f
+
+# Rumus Luas Segitiga
+luas = 0.5 * alas * tinggi
+
+puts "-------------------------"
+puts "Luas Segitiga adalah: #{luas}"
