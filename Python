@@ -1,0 +1,11 @@
+# Program Python untuk menghitung luas segitiga
+
+# Mengambil input alas dan tinggi dari pengguna
+alas = float(input("Masukkan panjang alas: "))
+tinggi = float(input("Masukkan tinggi segitiga: "))
+
+# Menghitung luas segitiga
+luas = 0.5 * alas * tinggi
+
+# Menampilkan hasil
+print(f"Luas segitiga adalah: {luas}")
